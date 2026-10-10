@@ -2386,3 +2386,54 @@ body[data-page="home"] .hero .slider-controls{visibility:hidden!important}
 body[data-page="home"] .trust-strip .trust-item{
   padding-top:6px!important;
 }
+
+
+/* FINAL MOBILE HERO FIX — separate the copy and video into non-overlapping columns */
+@media(max-width:760px){
+  body[data-page="home"] .hero{
+    height:500px!important;min-height:500px!important;max-height:none!important;
+  }
+  body[data-page="home"] .hero .hero-video-slide{
+    inset:50% 4% auto auto!important;
+    width:32%!important;max-width:180px!important;height:auto!important;
+    aspect-ratio:3/4!important;transform:translateY(-42%)!important;
+    border-radius:10px!important;overflow:hidden!important;z-index:-1!important;
+  }
+  body[data-page="home"] .hero-background-video{
+    width:100%!important;height:100%!important;object-fit:cover!important;
+  }
+  body[data-page="home"] .hero-inner{
+    align-items:flex-start!important;height:100%!important;
+  }
+  body[data-page="home"] .hero-copy{
+    width:62%!important;max-width:62%!important;
+    padding:112px 14px 65px 0!important;margin:0!important;
+    position:relative!important;z-index:3!important;
+  }
+  body[data-page="home"] .hero-copy .eyebrow{
+    font-size:7px!important;letter-spacing:.5px!important;line-height:1.4!important;
+  }
+  body[data-page="home"] .hero h1{
+    font-size:clamp(21px,5.5vw,28px)!important;line-height:1.12!important;
+    letter-spacing:-.45px!important;margin:10px 0 10px!important;
+  }
+  body[data-page="home"] .hero-copy>p{
+    font-size:clamp(9px,2.45vw,11px)!important;line-height:1.5!important;
+    max-width:100%!important;margin:0!important;
+  }
+  body[data-page="home"] .hero-overlay{
+    background:linear-gradient(90deg,#211812 0%,#211812 55%,rgba(33,24,18,.82) 65%,rgba(33,24,18,.10) 100%)!important;
+  }
+  body[data-page="home"] .hero .slider-controls{display:none!important}
+}
+@media(max-width:390px){
+  body[data-page="home"] .hero{height:470px!important;min-height:470px!important}
+  body[data-page="home"] .hero .hero-video-slide{
+    width:31%!important;right:3%!important;transform:translateY(-35%)!important;
+  }
+  body[data-page="home"] .hero-copy{
+    width:63%!important;max-width:63%!important;padding-top:105px!important;padding-right:12px!important;
+  }
+  body[data-page="home"] .hero h1{font-size:clamp(20px,5.3vw,24px)!important}
+  body[data-page="home"] .hero-copy>p{font-size:9px!important;line-height:1.45!important}
+}

@@ -1926,3 +1926,6 @@ body[data-page="product"] .recommended-section .product-image {
  body[data-page="home"] .hero .hero-overlay{position:absolute!important;inset:0 0 auto 0!important;height:40%!important;background:linear-gradient(135deg,#39271b,#4b3322 60%,#39271b)!important;z-index:1!important;pointer-events:none!important}
  body[data-page="home"] .hero .hero-bottom{position:relative!important;order:3!important;left:auto!important;right:auto!important;bottom:auto!important;width:100%!important}
 }
+
+/* Mobile only: remove excess space above hero text; leave everything else unchanged */
+@media(max-width:700px){body[data-page="home"] .hero .hero-inner{padding-top:70px!important}}

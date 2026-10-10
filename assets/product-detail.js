@@ -44,7 +44,7 @@ function render(p,all){
    const price=p.basePrice+Math.max(0,selectedSize-1)*perInch;
    priceEl.textContent=money(price);
    if(add){add.dataset.price=String(price);add.dataset.add=p.name+" ("+selectedSize+" inch)";}if(buy){buy.dataset.price=String(price);buy.dataset.buyNow=p.name+" ("+selectedSize+" inch)";}
-   $("#sizePriceNote").textContent="Price adjusts to the selected size.";
+   $("#sizePriceNote").textContent="1 inch = ₹500; each additional inch adds ₹120.";
    return price;
  };
  $("#productSize")?.addEventListener("input",updatePrice);
@@ -56,7 +56,7 @@ function render(p,all){
    else{selectedSize=Number(b.dataset.size);updatePrice();}
  }));
 if($("#productSize")){$("#productSize").addEventListener("input",updatePrice);$("#productSize").addEventListener("change",updatePrice);}
- document.querySelectorAll(".size-preset").forEach(b=>b.addEventListener("click",()=>{$("#productSize").value=b.dataset.size;updatePrice();}));
+
  document.addEventListener("click",e=>{const b=e.target.closest(".detail-thumb");if(!b)return;const im=$("#mainProductImage");if(im){im.src=b.dataset.src;document.querySelectorAll(".detail-thumb").forEach(x=>x.classList.toggle("active",x===b));}});
  $("#enquireProduct").addEventListener("click",()=>{const size=$("#productSize");const price=updatePrice();const details=size?"Size: "+size.value+" inches\nCalculated price: "+money(price):"Listed price: "+money(price);const msg="Hello PROTOFLOW 3D, I'm interested in "+p.name+".\n"+details+"\nPlease confirm availability and delivery.";window.open("https://wa.me/918948681254?text="+encodeURIComponent(msg),"_blank","noopener");});
  const rec=all.filter(x=>x.id!==p.id).filter(x=>x.category===p.category||x.images.length).slice(0,4);

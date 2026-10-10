@@ -242,35 +242,56 @@
      from your Google Sheet instead (categories are created automatically).
      ===================================================================== */
   const DEFAULT_CATEGORIES = [
-    {id:"divine-creations", title:"Divine Creations", blurb:"Detailed idols and meaningful designs crafted to bring peace and presence to your space.", products:[
-      {name:"Divine Creation", desc:"Detailed statement piece", price:1499, img:"product-divine-sculpture.jpg", badge:"Bestseller"},
-      {name:"Lord Ganesha Idol", desc:"Home temple & desk", price:999, img:"product-ganesha.jpg"},
-      {name:"Meditating Buddha", desc:"Calm, minimal form", price:1299, img:"product-buddha.jpg"},
-      {name:"Krishna Flute Statue", desc:"Fine detailed finish", price:1199, img:"product-krishna.jpg", badge:"New"}
+    {id:"divine-creations", title:"Divine Creations", blurb:"Devotional sculptures and meaningful keepsakes.", products:[
+      {name:"Krishna Flute Idol", desc:"Seated Krishna figure playing the flute.", price:500, basePrice:500, pricePerInch:120, img:"WhatsApp Image 2026-10-11 at 12.07.33 AM (1).jpeg"},
+      {name:"Lord Ganesha Idol", desc:"Seated Lord Ganesha figure in a bright yellow finish.", price:500, basePrice:500, pricePerInch:120, img:"WhatsApp Image 2026-10-11 at 12.07.33 AM.jpeg"},
+      {name:"Sai Baba Seated Statue", desc:"Seated Sai Baba sculpture with draped robe.", price:500, basePrice:500, pricePerInch:120, img:"WhatsApp Image 2026-10-11 at 12.07.32 AM (1).jpeg"},
+      {name:"Mother & Child Flame Sculpture", desc:"Mother and child framed by a flowing flame-shaped silhouette.", price:500, basePrice:500, pricePerInch:120, img:"513a38da-f4b2-4af3-a9f3-b54914ae47de.jpg"},
+      {name:"Chhatrapati Shivaji Maharaj Bust", desc:"Bust sculpture on a decorative pedestal.", price:500, basePrice:500, pricePerInch:120, img:"WhatsApp Image 2026-10-11 at 12.07.44 AM (1).jpeg"},
+      {name:"Meditating Buddha Figurine", desc:"A calm, seated meditating Buddha sculpture.", price:500, basePrice:500, pricePerInch:120, img:"WhatsApp Image 2026-10-11 at 12.07.32 AM.jpeg"},
+      {name:"Krishna Decorative Statue", desc:"A second Krishna statue design from the uploaded collection.", price:500, basePrice:500, pricePerInch:120, img:"WhatsApp Image 2026-10-11 at 12.07.33 AM (2).jpeg"},
+      {name:"Sai Baba Portrait Statue", desc:"Alternate Sai Baba sculpture design.", price:500, basePrice:500, pricePerInch:120, img:"WhatsApp Image 2026-10-11 at 12.07.44 AM.jpeg"}
     ]},
-    {id:"decor", title:"Home Decor", blurb:"Vases, planters, lamps and wall pieces with a modern contemporary touch.", products:[
-      {name:"Arc Form Vase", desc:"Minimal modern decor", price:899, img:"product-arc-vase.jpg"},
-      {name:"Geometric Planter", desc:"For small indoor plants", price:599, img:"product-planter.jpg"},
-      {name:"Abstract Wall Art", desc:"Textured 3D wall piece", price:1199, img:"product-wall-art.jpg"},
-      {name:"Designer Lamp Shade", desc:"Soft patterned light", price:1399, img:"product-lamp.jpg"}
+    {id:"home-decor", title:"Home Decor", blurb:"Sculptural accents to bring character to shelves and living spaces.", products:[
+      {name:"Sculpted Rose Bouquet", desc:"Decorative arrangement of sculpted roses with textured petals.", price:500, basePrice:500, pricePerInch:120, img:"WhatsApp Image 2026-10-11 at 12.07.34 AM (1).jpeg"},
+      {name:"Rose Bouquet — Alternate Design", desc:"A second sculpted rose arrangement from the uploaded photos.", price:500, basePrice:500, pricePerInch:120, img:"WhatsApp Image 2026-10-11 at 12.07.34 AM (2).jpeg"},
+      {name:"Rose Stem Trio", desc:"Long-stem sculpted roses in contrasting finishes.", price:500, basePrice:500, pricePerInch:120, img:"WhatsApp Image 2026-10-11 at 12.07.43 AM.jpeg"},
+      {name:"Rose Stem — Red Finish", desc:"Sculpted rose stem in a red finish.", price:500, basePrice:500, pricePerInch:120, img:"WhatsApp Image 2026-10-11 at 12.07.43 AM (1).jpeg"},
+      {name:"Rose Stem — Orange Finish", desc:"Sculpted rose stem in an orange finish.", price:500, basePrice:500, pricePerInch:120, img:"WhatsApp Image 2026-10-11 at 12.07.43 AM (2).jpeg"},
+      {name:"Owl Figurine", desc:"Rounded owl character with layered feather details.", price:500, basePrice:500, pricePerInch:120, img:"WhatsApp Image 2026-10-11 at 12.07.38 AM (1).jpeg"},
+      {name:"Owl Figurine — Alternate Finish", desc:"Owl character figurine shown in another finish.", price:500, basePrice:500, pricePerInch:120, img:"WhatsApp Image 2026-10-11 at 12.07.38 AM.jpeg"},
+      {name:"Mother & Child Heart Keepsake", desc:"Heart-shaped mother-and-child sculpture.", price:500, basePrice:500, pricePerInch:120, img:"64809399-1220-4f1c-8083-d9ca20d2e0aa.jpg"},
+      {name:"Abstract Couple Heart Sculpture", desc:"Modern couple sculpture with hands forming a heart.", price:500, basePrice:500, pricePerInch:120, img:"eb0e74ad-90e3-44ff-8ffb-0fd02e7e178c.jpg"}
     ]},
-    {id:"miniatures", title:"Miniatures & Collectibles", blurb:"Small-scale models, figurines and collectibles for shelves and desks.", products:[
-      {name:"Miniature Landmark", desc:"Small-scale collectible", price:1199, img:"product-miniature.jpg", badge:"New"},
-      {name:"Vintage Car Model", desc:"Detailed desk model", price:799, img:"product-car.jpg"},
-      {name:"Desk Figurine", desc:"Character collectible", price:549, img:"product-figurine.jpg"},
-      {name:"Chess Piece Set", desc:"Hand-finished pieces", price:1499, img:"product-chess.jpg"}
+    {id:"miniatures-collectibles", title:"Miniatures & Collectibles", blurb:"Character figures and display pieces for shelves and desks.", products:[
+      {name:"Tactical Skull Soldier — White", desc:"Skull-faced tactical character with helmet and equipment.", price:500, basePrice:500, pricePerInch:120, img:"WhatsApp Image 2026-10-11 at 12.07.31 AM (1).jpeg"},
+      {name:"Tactical Skull Soldier — Dark", desc:"Dark-finish tactical character with helmet and gear.", price:500, basePrice:500, pricePerInch:120, img:"WhatsApp Image 2026-10-11 at 12.07.36 AM (1).jpeg"},
+      {name:"One Piece Logo Display Plaque", desc:"Colourful anime-inspired logo display plaque.", price:500, basePrice:500, pricePerInch:120, img:"WhatsApp Image 2026-10-11 at 12.07.39 AM (3).jpeg"},
+      {name:"Tactical Soldier Figurine", desc:"Another tactical character collectible from the image set.", price:500, basePrice:500, pricePerInch:120, img:"WhatsApp Image 2026-10-11 at 12.07.35 AM.jpeg"},
+      {name:"Character Figurine — Alternate Design", desc:"Character collectible with sculpted details.", price:500, basePrice:500, pricePerInch:120, img:"WhatsApp Image 2026-10-11 at 12.07.35 AM (2).jpeg"},
+      {name:"Embracing Couple Sculpture", desc:"Minimalist sculpture of a couple embracing.", price:500, basePrice:500, pricePerInch:120, img:"8742f719-86ff-46dd-bfe7-329360d44d53.jpg"},
+      {name:"Wedding Couple Figurine", desc:"Bride and groom figurine standing on a round base.", price:500, basePrice:500, pricePerInch:120, img:"8d5a2e7f-00d9-4d0d-9d11-d508dbb26ca3.jpg"},
+      {name:"Couple Keepsake — Alternate Design", desc:"A second couple sculpture design from the uploaded set.", price:500, basePrice:500, pricePerInch:120, img:"bcbb6f0e-c76f-4b05-84ff-562a14c06a7a.jpg"}
     ]},
-    {id:"functional", title:"Functional & Utility", blurb:"Useful everyday objects, designed well and printed to last.", products:[
-      {name:"Phone Stand", desc:"Sturdy, angled, minimal", price:399, img:"product-phone-stand.jpg"},
-      {name:"Desk Organizer", desc:"Pens, cards and clips", price:699, img:"product-organizer.jpg", badge:"Popular"},
-      {name:"Cable Holder", desc:"Keeps your desk tidy", price:249, img:"product-cable.jpg"},
-      {name:"Headphone Stand", desc:"Clean modern design", price:799, img:"product-headphone.jpg"}
+    {id:"functional-utility", title:"Functional & Utility", blurb:"Practical 3D-printed pieces for everyday use and desk organisation.", products:[
+      {name:"Honeycomb Wall Key Holder", desc:"Geometric wall-mounted key organiser with accent hooks.", price:500, basePrice:500, pricePerInch:120, img:"WhatsApp Image 2026-10-11 at 12.07.31 AM.jpeg"},
+      {name:"Hexagon Wall Key Holder", desc:"Hexagon-pattern wall key holder with gold-tone hooks.", price:500, basePrice:500, pricePerInch:120, img:"WhatsApp Image 2026-10-11 at 12.07.36 AM (2).jpeg"},
+      {name:"Desktop Organizer Tray", desc:"Tiered organiser with divided compartments.", price:500, basePrice:500, pricePerInch:120, img:"WhatsApp Image 2026-10-11 at 12.07.39 AM (1).jpeg"},
+      {name:"Macro Switch Pro", desc:"Compact macro controller with knobs and programmable-style keys.", price:500, basePrice:500, pricePerInch:120, img:"WhatsApp Image 2026-10-11 at 12.07.37 AM (2).jpeg"},
+      {name:"Desktop Organizer — Compact", desc:"Compact organiser tray for small desk accessories.", price:500, basePrice:500, pricePerInch:120, img:"WhatsApp Image 2026-10-11 at 12.07.39 AM (2).jpeg"},
+      {name:"Desktop Organizer — Wide", desc:"Wider view of the compartment organiser design.", price:500, basePrice:500, pricePerInch:120, img:"WhatsApp Image 2026-10-11 at 12.07.39 AM.jpeg"},
+      {name:"Hexagon Key Holder — Alternate", desc:"Alternate photo of a geometric key holder.", price:500, basePrice:500, pricePerInch:120, img:"WhatsApp Image 2026-10-11 at 12.07.36 AM.jpeg"},
+      {name:"Desk Utility Accessory", desc:"Practical desk accessory from the uploaded collection.", price:500, basePrice:500, pricePerInch:120, img:"WhatsApp Image 2026-10-11 at 12.07.37 AM.jpeg"}
     ]},
-    {id:"gifts", title:"Gifts & Personalised", blurb:"Name plates, keychains and keepsakes made for someone special.", products:[
-      {name:"Custom Name Plate", desc:"Your name, your style", price:499, img:"product-nameplate.jpg", badge:"Custom"},
-      {name:"Custom Keychain", desc:"Name or initials", price:199, img:"product-keychain.jpg"},
-      {name:"Photo Lithophane Lamp", desc:"Your photo, lit from within", price:1299, img:"product-lithophane.jpg"},
-      {name:"Couple Figurine", desc:"Personalised keepsake", price:1599, img:"product-couple.jpg"}
+    {id:"gifts-personalised", title:"Gifts & Personalised", blurb:"Keepsakes and decorative gifts for meaningful occasions.", products:[
+      {name:"Mother & Child Keepsake", desc:"Mother-and-child sculpture in a flowing silhouette.", price:500, basePrice:500, pricePerInch:120, img:"WhatsApp Image 2026-10-11 at 12.07.42 AM.jpeg"},
+      {name:"Couple Heart Sculpture", desc:"Couple sculpture arranged in a heart-shaped pose.", price:500, basePrice:500, pricePerInch:120, img:"f1f6a928-fb72-4cc7-bf3d-d419b7e3dae0.jpg"},
+      {name:"Flame Mother & Child Keepsake", desc:"Mother-and-child keepsake in a sculptural frame.", price:500, basePrice:500, pricePerInch:120, img:"cebd3097-83b0-46d4-b8f4-07b8a7d5ca3c.jpg"},
+      {name:"Wedding Couple Keepsake", desc:"Couple sculpture suitable as a wedding gift.", price:500, basePrice:500, pricePerInch:120, img:"WhatsApp Image 2026-10-11 at 12.07.40 AM (1).jpeg"},
+      {name:"Decorative Couple Figurine", desc:"Decorative couple figurine for gifting.", price:500, basePrice:500, pricePerInch:120, img:"WhatsApp Image 2026-10-11 at 12.07.40 AM.jpeg"},
+      {name:"Rose Gift Stem", desc:"Sculpted rose stem suitable for a small gift.", price:500, basePrice:500, pricePerInch:120, img:"WhatsApp Image 2026-10-11 at 12.07.35 AM (1).jpeg"},
+      {name:"Heart Couple Sculpture", desc:"Couple keepsake with a heart-inspired shape.", price:500, basePrice:500, pricePerInch:120, img:"WhatsApp Image 2026-10-11 at 12.07.41 AM.jpeg"},
+      {name:"Mother & Child Sculpture — Alternate", desc:"Alternate mother-and-child sculpture design.", price:500, basePrice:500, pricePerInch:120, img:"WhatsApp Image 2026-10-11 at 12.07.42 AM (1).jpeg"}
     ]}
   ];
 

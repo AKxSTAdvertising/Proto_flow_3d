@@ -1777,3 +1777,10 @@ body[data-page="product"] .detail-main-image{background:#f3ece2;}
 body[data-page="product"] .detail-main-image img{object-fit:contain!important;object-position:center!important;padding:14px!important;}
 body[data-page="product"] .detail-thumb img{object-fit:contain!important;object-position:center!important;padding:4px!important;}
 .product-fallback[hidden]{display:none!important;}
+
+
+/* Product detail description: 10% smaller and regular weight */
+body[data-page="product"] .detail-copy .detail-description{
+  font-size:12.6px!important;
+  font-weight:400!important;
+}

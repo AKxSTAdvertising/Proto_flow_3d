@@ -62,6 +62,8 @@ if($("#productSize")){$("#productSize").addEventListener("input",updatePrice);$(
  const rec=all.filter(x=>x.id!==p.id).filter(x=>x.category===p.category||x.images.length).slice(0,4);
  $("#recommendedGrid").innerHTML=rec.length?rec.map(x=>'<a class="product-card product-detail-link" href="product.html?id='+encodeURIComponent(x.id)+'"><div class="product-image">'+(x.images.length?'<img src="'+esc(imageURL(x.images[0]))+'" alt="'+esc(x.name)+'" onerror="this.style.display=\'none\'">':'<div class="product-fallback">IMAGES COMING SOON</div>')+'</div><div class="product-info"><div><h3>'+esc(x.name)+'</h3><p>'+esc(x.description)+'</p></div><span class="price">'+money(x.basePrice)+'</span></div></a>').join(""):Array(4).fill('<div class="product-card recommendation-placeholder"><div class="product-image"><div class="product-fallback">NEW DESIGN<br>COMING SOON</div></div><div class="product-info"><div><h3>Coming soon</h3><p>We are preparing another design for this collection.</p></div><span class="price">To be announced</span></div></div>').join("");
 }
-const id=slug(new URLSearchParams(location.search).get("id")||"");
+const params=new URLSearchParams(location.search);
+const id=slug(params.get("id")||"");
+const requestedName=params.get("name")||"";
 load().then(all=>{const p=all.find(x=>slug(x.id)===slug(id)||slug(x.name)===slug(id))||all.find(x=>requestedName&&slug(x.name)===slug(requestedName));if(!p){$("#productDetail").innerHTML='<div class="empty-state"><h2>Product coming soon</h2><p>This product is not available yet.</p><a class="btn btn-dark" href="collections.html">Browse collections</a></div>';return;}render(p,all);}).catch(()=>{$("#productDetail").innerHTML='<div class="empty-state"><h2>Product details coming soon</h2><p>Our catalogue will be available here shortly.</p><a class="btn btn-dark" href="collections.html">Browse collections</a></div>';});
 })();

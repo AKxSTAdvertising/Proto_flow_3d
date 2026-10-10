@@ -2380,3 +2380,9 @@ body[data-page="home"] .hero .slider-controls{visibility:hidden!important}
   }
   body[data-page="home"] .hero-copy>p{font-size:9px!important;line-height:1.45!important}
 }
+
+
+/* HOME TRUST STRIP — remove only the excess space above the four trust labels */
+body[data-page="home"] .trust-strip .trust-item{
+  padding-top:6px!important;
+}

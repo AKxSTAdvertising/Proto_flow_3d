@@ -376,18 +376,17 @@
     const href = "product.html?id=" + encodeURIComponent(productSlug) + "&name=" + encodeURIComponent(String(p.name || ""));
     return `
       <article class="product-card" data-name="${n}" data-price="${p.price}" data-index="${index}">
-        <a class="product-card-main product-detail-link" href="${href}" aria-label="View ${n} details">
+        <div class="product-card-main">
           <div class="product-image">
             <span class="product-fallback"${p.img ? " hidden" : ""}>PRODUCT IMAGE COMING SOON</span>
             ${p.img ? `<img src="${escapeHTML(imgSrc(p.img))}" alt="${n}" loading="lazy" onerror="this.style.display='none';this.previousElementSibling.hidden=false">` : ""}
             ${p.badge ? `<span class="product-badge">${escapeHTML(p.badge)}</span>` : ""}
           </div>
           <div class="product-info"><div><h3>${n}</h3><p>${escapeHTML(p.desc || "")}</p></div><span class="price">From ${money(p.price)}</span></div>
-        </a>
+        </div>
         <div class="product-actions">
           <button class="add-btn" data-add="${n}" data-price="${p.price}">Add to cart</button>
           <button class="icon-btn quick-view" data-name="${n}" data-price="${p.price}" data-desc="${escapeHTML(p.desc || "")}" aria-label="Quick view">↗</button>
-          <a class="icon-btn" href="${href}" aria-label="View product details">Details</a>
         </div>
         <div class="product-actions product-actions-secondary">
           <button class="product-action-link" data-enquire-product="${n}" data-price="${p.price}">WhatsApp Enquiry</button>

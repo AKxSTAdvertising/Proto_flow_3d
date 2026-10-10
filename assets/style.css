@@ -2178,3 +2178,51 @@ body[data-page="home"] .hero .slider-controls{visibility:hidden!important}
   body[data-page="home"] .hero h1{font-size:clamp(22px,5.9vw,27px)!important}
   body[data-page="home"] .hero-copy>p{font-size:10px!important;line-height:1.5!important}
 }
+
+
+/* MOBILE HERO FINAL TUNING: keep copy fully in its own left column */
+@media(max-width:760px){
+  body[data-page="home"] .hero{
+    height:470px!important;min-height:470px!important;max-height:none!important;
+  }
+  body[data-page="home"] .hero .hero-video-slide{
+    inset:28px 3.5% 28px auto!important;
+    width:38vw!important;max-width:220px!important;height:auto!important;
+    aspect-ratio:3/4!important;transform:none!important;
+    border-radius:14px!important;overflow:hidden!important;
+    z-index:-1!important;
+  }
+  body[data-page="home"] .hero-background-video{
+    width:100%!important;height:100%!important;object-fit:cover!important;
+  }
+  body[data-page="home"] .hero-copy{
+    width:55%!important;max-width:55%!important;
+    padding-top:clamp(150px,39vw,195px)!important;
+    padding-right:12px!important;
+  }
+  body[data-page="home"] .hero-copy .eyebrow{
+    font-size:7px!important;letter-spacing:.55px!important;line-height:1.4!important;gap:5px!important;
+  }
+  body[data-page="home"] .hero-copy .eyebrow:before{width:10px!important;flex:0 0 10px!important}
+  body[data-page="home"] .hero h1{
+    font-size:clamp(22px,5.4vw,31px)!important;
+    line-height:1.12!important;letter-spacing:-.45px!important;margin:10px 0!important;
+    overflow-wrap:normal!important;word-break:normal!important;
+  }
+  body[data-page="home"] .hero-copy>p{
+    font-size:clamp(9px,2.5vw,11px)!important;line-height:1.5!important;
+    max-width:100%!important;margin-bottom:8px!important;
+  }
+}
+@media(max-width:390px){
+  body[data-page="home"] .hero{height:450px!important;min-height:450px!important}
+  body[data-page="home"] .hero .hero-video-slide{
+    inset:25px 3% 25px auto!important;width:37vw!important;border-radius:12px!important;
+  }
+  body[data-page="home"] .hero-copy{
+    width:56%!important;max-width:56%!important;
+    padding-top:clamp(145px,38vw,165px)!important;padding-right:10px!important;
+  }
+  body[data-page="home"] .hero h1{font-size:clamp(21px,5.3vw,25px)!important}
+  body[data-page="home"] .hero-copy>p{font-size:9px!important;line-height:1.45!important}
+}

@@ -496,7 +496,7 @@
         return `<section class="section home-category-section">
           <div class="container">
             <div class="section-head reveal">
-              <div><div class="eyebrow" style="color:#9b7449">Collection ${num(i + 1)}</div><h2>${escapeHTML(cat.title)}</h2></div>
+              <div><h2>${escapeHTML(cat.title)}</h2></div>
               <p>${escapeHTML(cat.blurb || "")}</p>
             </div>
             <div class="product-grid">${preview.map(productCard).join("")}</div>

@@ -1770,3 +1770,10 @@ body[data-page="collections"] .section.shop {
     padding-top:8px!important;
   }
 }
+
+
+/* PROTOFLOW catalogue fit: keep the full printed object visible without cropping */
+body[data-page="product"] .detail-main-image{background:#f3ece2;}
+body[data-page="product"] .detail-main-image img{object-fit:contain!important;object-position:center!important;padding:14px!important;}
+body[data-page="product"] .detail-thumb img{object-fit:contain!important;object-position:center!important;padding:4px!important;}
+.product-fallback[hidden]{display:none!important;}

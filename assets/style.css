@@ -1929,3 +1929,15 @@ body[data-page="product"] .recommended-section .product-image {
 
 /* Mobile only: remove excess space above hero text; leave everything else unchanged */
 @media(max-width:700px){body[data-page="home"] .hero .hero-inner{padding-top:60px!important}}
+
+/* Hero text backdrop color: #211812 on desktop, tablet and mobile */
+@media(min-width:1000px){
+ body[data-page="home"] .hero .hero-overlay{
+  background:linear-gradient(90deg,#211812 0%,#211812 36%,rgba(33,24,18,.96) 46%,rgba(33,24,18,.72) 54%,rgba(33,24,18,0) 72%)!important;
+ }
+}
+@media(max-width:999px){
+ body[data-page="home"] .hero .hero-overlay{
+  background:#211812!important;
+ }
+}

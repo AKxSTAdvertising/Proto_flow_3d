@@ -4,7 +4,7 @@ const slug=s=>String(s||"").toLowerCase().normalize("NFD").replace(/[\u0300-\u03
 document.addEventListener("click",e=>{
  const card=e.target.closest(".product-card");
  if(card&&!e.target.closest("button")&&!e.target.closest("a")){
- const link=card.querySelector("a.product-detail-link");if(link)location.href=link.href;
+ 
  }
 });
 function filterRequestedCategory(){

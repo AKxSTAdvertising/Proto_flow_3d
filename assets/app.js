@@ -372,7 +372,8 @@
 
   function productCard(p, index){
     const n = escapeHTML(p.name);
-    const href = "product.html?id=" + encodeURIComponent(String(p.name || "").toLowerCase().normalize("NFD").replace(/[\\u0300-\\u036f]/g,"").replace(/[^a-z0-9]+/g,"-").replace(/^-|-$/g,""));
+    const productSlug = String(p.name || "").toLowerCase().normalize("NFD").replace(/[\\u0300-\\u036f]/g,"").replace(/[^a-z0-9]+/g,"-").replace(/^-|-$/g,"");
+    const href = "product.html?id=" + encodeURIComponent(productSlug) + "&name=" + encodeURIComponent(String(p.name || ""));
     return `
       <article class="product-card" data-name="${n}" data-price="${p.price}" data-index="${index}">
         <a class="product-card-main product-detail-link" href="${href}" aria-label="View ${n} details">

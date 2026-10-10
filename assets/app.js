@@ -460,17 +460,16 @@
 
     // collections + featured products
     loadCatalog().then(cats => {
-      const num = n => String(n).padStart(2, "0");
       $("#collectionGrid").innerHTML = cats.map((cat, i) => `
         <article class="collection-card collection-card-clickable" role="link" tabindex="0" aria-label="Open ${escapeHTML(cat.title)} collection" data-collection-url="${categoryPageUrl(cat.id)}">
           <div class="collection-placeholder"></div>
           ${cat.image ? `<img src="${escapeHTML(imgSrc(cat.image))}" alt="${escapeHTML(cat.title)}" onerror="this.style.display='none'">` : ""}
-          <div class="collection-info"><small>Collection ${num(i + 1)}</small><h3>${escapeHTML(cat.title)}</h3></div>
+          <div class="collection-info"><h3>${escapeHTML(cat.title)}</h3></div>
         </article>`).join("") + `
         <article class="collection-card collection-card-clickable" role="link" tabindex="0" aria-label="Open custom creations contact page" data-collection-url="contact.html">
           <div class="collection-placeholder"></div>
           <img src="images/category-custom.jpg" alt="Custom creations" onerror="this.style.display='none'">
-          <div class="collection-info"><small>Collection ${num(cats.length + 1)}</small><h3>Custom Creations</h3><a href="contact.html">Make it yours ↗</a></div>
+          <div class="collection-info"><h3>Custom Creations</h3><a href="contact.html">Make it yours ↗</a></div>
         </article>`;
 
       // Make the entire collection tile (including its image/placeholder) open the collection.
@@ -547,7 +546,6 @@
       const directory = $("#collectionDirectory");
     if (directory) directory.innerHTML = CATS.map((cat, i) => `
       <a class="category-directory-card" href="${categoryPageUrl(cat.id)}">
-        <span class="category-directory-number">${String(i + 1).padStart(2, "0")}</span>
         <span class="category-directory-copy"><strong>${escapeHTML(cat.title)}</strong><small>${cat.products.length} products</small></span>
         <span class="category-directory-arrow" aria-hidden="true">↗</span>
       </a>`).join("");
@@ -556,7 +554,7 @@
         <section class="section cat-section" id="cat-${cat.id}" data-cat="${cat.id}">
           <div class="container">
             <div class="section-head">
-              <div><div class="eyebrow" style="color:#9b7449">Collection ${String(i + 1).padStart(2, "0")}</div><h2>${escapeHTML(cat.title)}</h2></div>
+              <div><h2>${escapeHTML(cat.title)}</h2></div>
               <p>${escapeHTML(cat.blurb || "")}</p>
             </div>
             <div class="product-grid">${cat.products.map(productCard).join("")}</div>

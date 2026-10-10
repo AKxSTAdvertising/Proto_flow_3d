@@ -1852,3 +1852,32 @@ body[data-page="product"] .recommended-section .product-image {
     min-height:455px!important;
   }
 }
+
+
+/* HOME HERO VIDEO — keep the warm site theme on the left, video on the right */
+body[data-page="home"] .hero{
+  background:radial-gradient(ellipse at 18% 45%,#4a3425 0%,#241914 55%,#171317 100%);
+}
+body[data-page="home"] .hero .hero-video-slide{
+  left:51%;right:0;top:0;bottom:0;inset:0 0 0 51%;
+  z-index:-1;opacity:1;overflow:hidden;
+}
+body[data-page="home"] .hero-background-video{
+  display:block;width:100%;height:100%;object-fit:cover;object-position:center;
+}
+body[data-page="home"] .hero-overlay{
+  background:linear-gradient(90deg,#211812 0%,rgba(33,24,18,.96) 34%,rgba(33,24,18,.55) 50%,rgba(33,24,18,.08) 72%,rgba(33,24,18,.12) 100%),
+             linear-gradient(180deg,rgba(12,10,12,.22),transparent 35%,rgba(12,10,12,.35));
+}
+body[data-page="home"] .hero-copy{position:relative;z-index:3;width:47%;max-width:560px}
+body[data-page="home"] .hero .slider-controls{visibility:hidden!important}
+@media(max-width:760px){
+  body[data-page="home"] .hero .hero-video-slide{inset:0 0 0 48%}
+  body[data-page="home"] .hero-overlay{
+    background:linear-gradient(90deg,#211812 0%,rgba(33,24,18,.96) 36%,rgba(33,24,18,.64) 53%,rgba(33,24,18,.10) 100%),
+               linear-gradient(180deg,rgba(12,10,12,.18),transparent 45%,rgba(12,10,12,.38));
+  }
+  body[data-page="home"] .hero-copy{width:58%;max-width:58%;padding-top:105px}
+  body[data-page="home"] .hero h1{font-size:clamp(35px,8.6vw,52px)}
+  body[data-page="home"] .hero-copy>p{font-size:12px;max-width:100%}
+}

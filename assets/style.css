@@ -2662,3 +2662,67 @@ body[data-page="home"] .trust-strip .trust-item{
     font-weight:400!important;
   }
 }
+
+
+/* PRODUCT CARDS + CART: brighter readable text and fully visible product imagery */
+body[data-page="home"] .product-card .product-info h3,
+body[data-page="collections"] .product-card .product-info h3,
+body[data-page="category"] .product-card .product-info h3,
+body[data-page="product"] .recommended-section .product-card .product-info h3,
+body[data-page="home"] .product-card .product-info .price,
+body[data-page="collections"] .product-card .product-info .price,
+body[data-page="category"] .product-card .product-info .price,
+body[data-page="product"] .recommended-section .product-card .product-info .price{
+  color:#fff!important;
+  opacity:1!important;
+  text-shadow:0 1px 4px rgba(0,0,0,.28);
+}
+body[data-page="home"] .product-card .product-info p,
+body[data-page="collections"] .product-card .product-info p,
+body[data-page="category"] .product-card .product-info p,
+body[data-page="product"] .recommended-section .product-card .product-info p{
+  color:#f4f0eb!important;
+  opacity:1!important;
+}
+body[data-page="home"] .product-card .product-image,
+body[data-page="collections"] .product-card .product-image,
+body[data-page="category"] .product-card .product-image,
+body[data-page="product"] .recommended-section .product-card .product-image{
+  overflow:hidden!important;
+}
+body[data-page="home"] .product-card .product-image img,
+body[data-page="collections"] .product-card .product-image img,
+body[data-page="category"] .product-card .product-image img,
+body[data-page="product"] .recommended-section .product-card .product-image img{
+  display:block!important;width:100%!important;height:100%!important;
+  object-fit:contain!important;object-position:center!important;
+  padding:10px!important;transform:none!important;
+}
+.cart-drawer{
+  background:#191519!important;color:#fff!important;
+}
+.cart-drawer h2,.cart-drawer h3,.cart-drawer h4,
+.cart-drawer p,.cart-drawer span,.cart-drawer label,
+.cart-drawer .cart-row,.cart-drawer .cart-row *{
+  color:#fff!important;opacity:1!important;
+}
+.cart-drawer input,.cart-drawer select{
+  color:#fff!important;background:#292329!important;border-color:#65535e!important;
+}
+.cart-drawer .cart-items img,.cart-drawer .cart-row img{
+  object-fit:contain!important;background:#f1e7d9!important;
+}
+@media(max-width:760px){
+  body[data-page="home"] .product-card .product-info h3,
+  body[data-page="collections"] .product-card .product-info h3,
+  body[data-page="category"] .product-card .product-info h3,
+  body[data-page="product"] .recommended-section .product-card .product-info h3{
+    font-size:12px!important;line-height:1.45!important;font-weight:600!important;
+  }
+  body[data-page="home"] .product-card .product-info p,
+  body[data-page="collections"] .product-card .product-info p,
+  body[data-page="category"] .product-card .product-info p,
+  body[data-page="product"] .recommended-section .product-card .product-info p{
+    font-size:10px!important;line-height:1.45!important;
+  }
+}

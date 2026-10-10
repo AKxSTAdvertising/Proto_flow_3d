@@ -1881,3 +1881,75 @@ body[data-page="home"] .hero .slider-controls{visibility:hidden!important}
   body[data-page="home"] .hero h1{font-size:clamp(35px,8.6vw,52px)}
   body[data-page="home"] .hero-copy>p{font-size:12px;max-width:100%}
 }
+
+
+/* MOBILE HERO REFINEMENT — readable copy left, more video visible right */
+@media(max-width:760px){
+  body[data-page="home"] .hero{
+    height:560px!important;
+    min-height:560px!important;
+    max-height:none!important;
+  }
+  body[data-page="home"] .hero .hero-video-slide{
+    inset:0 0 0 43%!important;
+  }
+  body[data-page="home"] .hero-overlay{
+    background:linear-gradient(90deg,
+      #211812 0%,
+      rgba(33,24,18,.98) 29%,
+      rgba(33,24,18,.88) 40%,
+      rgba(33,24,18,.42) 55%,
+      rgba(33,24,18,.04) 76%,
+      rgba(33,24,18,.08) 100%),
+      linear-gradient(180deg,rgba(12,10,12,.16),transparent 50%,rgba(12,10,12,.42));
+  }
+  body[data-page="home"] .hero-inner{
+    align-items:flex-start!important;
+    height:100%;
+  }
+  body[data-page="home"] .hero-copy{
+    width:57%!important;
+    max-width:57%!important;
+    padding-top:clamp(94px,19vw,124px)!important;
+    padding-right:8px;
+  }
+  body[data-page="home"] .hero-copy .eyebrow{
+    font-size:8px;
+    letter-spacing:1.2px;
+    line-height:1.5;
+    gap:6px;
+  }
+  body[data-page="home"] .hero-copy .eyebrow:before{width:14px;flex:0 0 14px}
+  body[data-page="home"] .hero h1{
+    font-size:clamp(30px,7.8vw,43px)!important;
+    line-height:1.08!important;
+    letter-spacing:-.7px!important;
+    margin:15px 0 14px!important;
+    overflow-wrap:normal;
+  }
+  body[data-page="home"] .hero-copy>p{
+    font-size:clamp(11px,2.9vw,13px)!important;
+    line-height:1.65!important;
+    max-width:100%!important;
+    margin-bottom:14px!important;
+    color:#f0e2d0!important;
+  }
+  body[data-page="home"] .hero-bottom{padding:10px 0}
+}
+@media(max-width:390px){
+  body[data-page="home"] .hero{
+    height:530px!important;
+    min-height:530px!important;
+  }
+  body[data-page="home"] .hero .hero-video-slide{inset:0 0 0 42%!important}
+  body[data-page="home"] .hero-copy{
+    width:59%!important;
+    max-width:59%!important;
+    padding-top:105px!important;
+  }
+  body[data-page="home"] .hero h1{
+    font-size:clamp(29px,7.6vw,34px)!important;
+    line-height:1.1!important;
+  }
+  body[data-page="home"] .hero-copy>p{font-size:11px!important;line-height:1.6!important}
+}

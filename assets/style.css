@@ -1833,3 +1833,7 @@ body[data-page="product"] .recommended-section .product-image {
 /* Catalogue cards are informational surfaces, not links to the detail page */
 .product-card-main{display:block;cursor:default;text-decoration:none!important;color:inherit!important}
 .product-card-main:hover h3{text-decoration:none!important}
+/* Product care, shipping and support details sit directly beneath purchase actions. */
+.detail-copy .product-extra-details{grid-template-columns:minmax(0,1fr);margin-top:18px}
+.detail-copy .product-extra-block{padding:16px 18px}
+.detail-copy .detail-enquire-link{display:block;margin-top:14px;font-weight:600}

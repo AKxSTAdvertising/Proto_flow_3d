@@ -1837,3 +1837,18 @@ body[data-page="product"] .recommended-section .product-image {
 .detail-copy .product-extra-details{grid-template-columns:minmax(0,1fr);margin-top:18px}
 .detail-copy .product-extra-block{padding:16px 18px}
 .detail-copy .detail-enquire-link{display:block;margin-top:14px;font-weight:600}
+
+
+/* MOBILE HOME HERO — reduce empty space after the headline without changing other pages */
+@media(max-width:700px){
+  body[data-page="home"] .hero{
+    height:470px!important;
+    min-height:470px!important;
+  }
+}
+@media(max-width:390px){
+  body[data-page="home"] .hero{
+    height:455px!important;
+    min-height:455px!important;
+  }
+}

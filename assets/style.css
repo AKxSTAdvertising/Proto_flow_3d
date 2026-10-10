@@ -2118,11 +2118,11 @@ body[data-page="home"] .hero .slider-controls{visibility:hidden!important}
 }
 
 
-/* FINAL MOBILE HERO: square video card on the right; complete copy stays in left column */
+/* FINAL MOBILE HERO: compact height; keep all copy left of the video */
 @media(max-width:760px){
   body[data-page="home"] .hero{
-    height:560px!important;
-    min-height:560px!important;
+    height:450px!important;
+    min-height:450px!important;
     max-height:none!important;
   }
   body[data-page="home"] .hero .hero-video-slide{
@@ -2148,7 +2148,7 @@ body[data-page="home"] .hero .slider-controls{visibility:hidden!important}
   }
   body[data-page="home"] .hero-copy{
     width:52%!important;max-width:52%!important;
-    padding-top:clamp(205px,48vw,270px)!important;
+    padding-top:clamp(170px,43vw,215px)!important;
     padding-right:10px!important;
   }
   body[data-page="home"] .hero-copy .eyebrow{
@@ -2167,12 +2167,12 @@ body[data-page="home"] .hero .slider-controls{visibility:hidden!important}
   body[data-page="home"] .hero-bottom{padding:10px 0!important}
 }
 @media(max-width:390px){
-  body[data-page="home"] .hero{height:540px!important;min-height:540px!important}
+  body[data-page="home"] .hero{height:430px!important;min-height:430px!important}
   body[data-page="home"] .hero .hero-video-slide{
     width:41vw!important;right:3%!important;border-radius:14px!important;
   }
   body[data-page="home"] .hero-copy{
-    width:53%!important;max-width:53%!important;padding-top:clamp(190px,50vw,220px)!important;
+    width:53%!important;max-width:53%!important;padding-top:clamp(160px,44vw,185px)!important;
     padding-right:9px!important;
   }
   body[data-page="home"] .hero h1{font-size:clamp(22px,5.9vw,27px)!important}

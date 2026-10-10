@@ -377,11 +377,13 @@
     return `
       <article class="product-card" data-name="${n}" data-price="${p.price}" data-index="${index}">
         <div class="product-card-main">
-          <div class="product-image">
-            <span class="product-fallback"${p.img ? " hidden" : ""}>PRODUCT IMAGE COMING SOON</span>
-            ${p.img ? `<img src="${escapeHTML(imgSrc(p.img))}" alt="${n}" loading="lazy" onerror="this.style.display='none';this.previousElementSibling.hidden=false">` : ""}
-            ${p.badge ? `<span class="product-badge">${escapeHTML(p.badge)}</span>` : ""}
-          </div>
+          <a class="product-detail-link" href="${href}" aria-label="View ${n}">
+            <div class="product-image">
+              <span class="product-fallback"${p.img ? " hidden" : ""}>PRODUCT IMAGE COMING SOON</span>
+              ${p.img ? `<img src="${escapeHTML(imgSrc(p.img))}" alt="${n}" loading="lazy" onerror="this.style.display='none';this.previousElementSibling.hidden=false">` : ""}
+              ${p.badge ? `<span class="product-badge">${escapeHTML(p.badge)}</span>` : ""}
+            </div>
+          </a>
           <div class="product-info"><div><h3>${n}</h3><p>${escapeHTML(p.desc || "")}</p></div><span class="price">From ${money(p.price)}</span></div>
         </div>
         <div class="product-actions">

@@ -2614,3 +2614,51 @@ body[data-page="home"] .trust-strip .trust-item{
   body[data-page="home"] .hero h1{font-size:clamp(27px,7.3vw,31px)!important}
   body[data-page="home"] .hero-copy>p{font-size:11px!important;line-height:1.4!important}
 }
+
+
+/* MOBILE TYPOGRAPHY — regular-weight, compact product details and catalogue cards */
+@media(max-width:760px){
+  body[data-page="product"] .product-extra-details .product-extra-block h3{
+    font-size:12px!important;
+    line-height:1.45!important;
+    font-weight:400!important;
+  }
+  body[data-page="product"] .product-extra-details .product-extra-block p,
+  body[data-page="product"] .product-extra-details .product-extra-block a,
+  body[data-page="product"] .detail-enquire-link,
+  body[data-page="product"] .detail-copy>.detail-note{
+    font-size:10px!important;
+    line-height:1.6!important;
+    font-weight:400!important;
+  }
+  body[data-page="product"] .product-extra-details .product-extra-block strong,
+  body[data-page="product"] .product-extra-details .product-extra-block b{
+    font-weight:400!important;
+  }
+  body[data-page="product"] .product-extra-details .product-extra-block{
+    padding:11px 12px!important;
+  }
+  body[data-page="home"] .product-info h3,
+  body[data-page="collections"] .product-info h3,
+  body[data-page="category"] .product-info h3,
+  body[data-page="product"] .recommended-section .product-info h3{
+    font-size:12px!important;
+    line-height:1.4!important;
+    font-weight:400!important;
+  }
+  body[data-page="home"] .product-info p,
+  body[data-page="collections"] .product-info p,
+  body[data-page="category"] .product-info p,
+  body[data-page="product"] .recommended-section .product-info p{
+    font-size:10px!important;
+    line-height:1.5!important;
+    font-weight:400!important;
+  }
+  body[data-page="home"] .product-info .price,
+  body[data-page="collections"] .product-info .price,
+  body[data-page="category"] .product-info .price,
+  body[data-page="product"] .recommended-section .product-info .price{
+    font-size:12px!important;
+    font-weight:400!important;
+  }
+}

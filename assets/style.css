@@ -1837,3 +1837,12 @@ body[data-page="product"] .recommended-section .product-image {
 .detail-copy .product-extra-details{grid-template-columns:minmax(0,1fr);margin-top:18px}
 .detail-copy .product-extra-block{padding:16px 18px}
 .detail-copy .detail-enquire-link{display:block;margin-top:14px;font-weight:600}
+
+/* Mobile spacing refinement for the homepage hero. */
+@media(max-width:700px){
+  .container{width:calc(100% - 24px)}
+  .hero{min-height:590px;height:78svh;max-height:700px}
+  .hero-copy{max-width:390px;padding-top:92px}
+  .hero h1{font-size:clamp(40px,10vw,56px)}
+  .hero-copy>p{max-width:300px;margin-bottom:16px}
+}

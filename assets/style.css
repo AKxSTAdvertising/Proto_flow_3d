@@ -1820,3 +1820,16 @@ body[data-page="category"] .product-info .price,
 body[data-page="product"] .recommended-section .product-info .price{
   display:block!important;width:100%;margin-top:0;padding-top:8px;border-top:1px solid rgba(180,150,110,.25);white-space:normal;
 }
+
+
+/* Product cards: remove bright white image panels; use warm premium cream */
+body[data-page="home"] .product-image,
+body[data-page="collections"] #categorySections .product-image,
+body[data-page="category"] .category-products-section .product-image,
+body[data-page="product"] .recommended-section .product-image {
+  background:#eee3d3!important;
+  border-color:#d8c5ac!important;
+}
+/* Catalogue cards are informational surfaces, not links to the detail page */
+.product-card-main{display:block;cursor:default;text-decoration:none!important;color:inherit!important}
+.product-card-main:hover h3{text-decoration:none!important}

@@ -1784,3 +1784,39 @@ body[data-page="product"] .detail-copy .detail-description{
   font-size:12.6px!important;
   font-weight:400!important;
 }
+
+
+/* Product card consistency: title, description and price use separate aligned rows */
+body[data-page="home"] .product-info,
+body[data-page="collections"] .product-info,
+body[data-page="category"] .product-info,
+body[data-page="product"] .recommended-section .product-info{
+  display:flex!important;
+  flex-direction:column!important;
+  align-items:stretch!important;
+  justify-content:flex-start!important;
+  gap:0!important;
+  min-width:0;
+}
+body[data-page="home"] .product-info>div,
+body[data-page="collections"] .product-info>div,
+body[data-page="category"] .product-info>div,
+body[data-page="product"] .recommended-section .product-info>div{min-width:0;width:100%}
+body[data-page="home"] .product-info h3,
+body[data-page="collections"] .product-info h3,
+body[data-page="category"] .product-info h3,
+body[data-page="product"] .recommended-section .product-info h3{
+  min-height:2.8em;line-height:1.4;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;
+}
+body[data-page="home"] .product-info p,
+body[data-page="collections"] .product-info p,
+body[data-page="category"] .product-info p,
+body[data-page="product"] .recommended-section .product-info p{
+  line-height:1.5;min-height:3em;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;margin:6px 0 10px;
+}
+body[data-page="home"] .product-info .price,
+body[data-page="collections"] .product-info .price,
+body[data-page="category"] .product-info .price,
+body[data-page="product"] .recommended-section .product-info .price{
+  display:block!important;width:100%;margin-top:0;padding-top:8px;border-top:1px solid rgba(180,150,110,.25);white-space:normal;
+}

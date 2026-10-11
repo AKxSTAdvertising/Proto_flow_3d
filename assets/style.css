@@ -1947,3 +1947,6 @@ body[data-page="product"] .recommended-section .product-image {
  body[data-page="home"] .hero .hero-inner{padding-top:60px!important}
  body[data-page="home"] .hero .hero-copy{padding-top:0!important}
 }
+
+/* Match Collections navigation label to Home; no other nav styles changed */
+.nav-links .collection-menu-toggle{font-size:13px!important;font-family:inherit!important;font-weight:inherit!important}

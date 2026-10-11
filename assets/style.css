@@ -1950,3 +1950,27 @@ body[data-page="product"] .recommended-section .product-image {
 
 /* Match Collections navigation label to Home; no other nav styles changed */
 .nav-links .collection-menu-toggle{font-size:13px!important;font-family:inherit!important;font-weight:inherit!important}
+
+
+/* Mobile only: reduce product policy/support text size and weight; preserve desktop styling */
+@media(max-width:700px){
+ body[data-page="product"] .product-extra-details .product-extra-block h3{
+  font-size: .6em!important;
+  font-weight: 500!important;
+  line-height: 1.35!important;
+ }
+ body[data-page="product"] .product-extra-details .product-extra-block p,
+ body[data-page="product"] .product-extra-details .product-extra-block a{
+  font-size: .6em!important;
+  font-weight: 400!important;
+  line-height: 1.5!important;
+  overflow-wrap: anywhere;
+ }
+ body[data-page="product"] .product-extra-details .product-extra-block{
+  padding: 12px 14px!important;
+  text-align: left!important;
+ }
+ body[data-page="product"] .product-extra-details .product-extra-block *{
+  text-align: left!important;
+ }
+}

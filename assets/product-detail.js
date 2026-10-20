@@ -44,7 +44,7 @@ function render(p,all){
    const price=p.basePrice+Math.max(0,selectedSize-1)*perInch;
    priceEl.textContent=money(price);
    if(add){add.dataset.price=String(price);add.dataset.add=p.name+" ("+selectedSize+" inch)";}if(buy){buy.dataset.price=String(price);buy.dataset.buyNow=p.name+" ("+selectedSize+" inch)";}
-   $("#sizePriceNote").textContent="1 inch = ₹500; each additional inch adds ₹120.";
+   $("#sizePriceNote").textContent="1 inch = ₹600; each additional inch adds ₹120.";
    return price;
  };
  $("#productSize")?.addEventListener("input",updatePrice);
